@@ -1,0 +1,89 @@
+:root {
+  --bg-1: #0ea5e9;
+  --bg-2: #6366f1;
+  --bg-3: #a855f7;
+  --text: #f8fafc;
+  --card: rgba(2,6,23,.55);
+  --card-border: rgba(255,255,255,.15);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--text);
+  background: linear-gradient(135deg, #0b386f 0%, #3c2a8d 50%, #53258f 100%) fixed;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  width: min(1200px, 92vw);
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  background: rgba(255,255,255,.035);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.02);
+}
+
+/* --- GitHub Icon Button --- */
+.icon-button {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon {
+  height: 1em;
+  width: auto;
+  vertical-align: -0.15em;
+  filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.15));
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-button:hover .icon {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* --- Hyperlink Styles --- */
+.hyperlink {
+  color: var(--text);
+  text-decoration: underline;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
+}
